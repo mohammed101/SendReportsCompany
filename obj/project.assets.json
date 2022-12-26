@@ -1159,8 +1159,8 @@
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://rasan-insurtech.pkgs.visualstudio.com/_packaging/InsuranceTech-Feed/nuget/v3/index.json": {}
+        "https://rasan-insurtech.pkgs.visualstudio.com/_packaging/InsuranceTech-Feed/nuget/v3/index.json": {},
+        "https://tameeni.pkgs.visualstudio.com/_packaging/GlobalFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

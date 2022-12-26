@@ -1,0 +1,7 @@
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.csproj.AssemblyReference.cache
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.GeneratedMSBuildEditorConfig.editorconfig
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.AssemblyInfoInputs.cache
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.AssemblyInfo.cs
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.csproj.CoreCompileInputs.cache
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.MvcApplicationPartsAssemblyInfo.cs
+D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.MvcApplicationPartsAssemblyInfo.cache

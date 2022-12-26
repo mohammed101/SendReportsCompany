@@ -1,5 +1,5 @@
 using MassTransit;
-using MassTransit.Transports.Fabric;
+using RabbitMQ.Client;
 using SendReportsCompany;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,8 +28,8 @@ builder.Services.AddMassTransit(mt =>
             e.UseRoutingKeyFormatter(context => context.Message.Provider.ToString()); // route by provider (email or fax)
         });
     });
-    builder.Services.AddMassTransitHostedService();
 });
+builder.Services.AddMassTransitHostedService();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

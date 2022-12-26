@@ -6,7 +6,8 @@ namespace SendReportsCompany.Consumers
     {
         public Task Consume(ConsumeContext<ISendReportRequest> context)
         {
-            throw new NotImplementedException();
+            // do work to send email here
+            return Task.CompletedTask;
         }
     }
 }

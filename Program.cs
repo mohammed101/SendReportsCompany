@@ -1,6 +1,7 @@
 using MassTransit;
 using RabbitMQ.Client;
 using SendReportsCompany;
+using SendReportsCompany.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 

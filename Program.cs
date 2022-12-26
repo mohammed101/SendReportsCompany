@@ -1,4 +1,3 @@
-using MassTransit;
 using RabbitMQ.Client;
 using SendReportsCompany;
 

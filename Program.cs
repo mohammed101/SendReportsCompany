@@ -1,3 +1,6 @@
+using RabbitMQ.Client;
+using SendReportsCompany;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,25 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddMassTransit(mt =>
+{
+    mt.UsingRabbitMq((context, config) =>
+    {
+        config.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+
+        config.Message<ISendReportRequest>(e => e.SetEntityName("report-requests")); // name of the primary exchange
+        config.Publish<ISendReportRequest>(e => e.ExchangeType = ExchangeType.Direct); // primary exchange type
+        config.Send<ISendReportRequest>(e =>
+        {
+            e.UseRoutingKeyFormatter(context => context.Message.Provider.ToString()); // route by provider (email or fax)
+        });
+    });
+});
+builder.Services.AddMassTransitHostedService();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

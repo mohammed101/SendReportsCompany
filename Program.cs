@@ -51,8 +51,8 @@ builder.Services.AddMassTransit(mt =>
             });
         });
     });
-    builder.Services.AddMassTransitHostedService();
 });
+builder.Services.AddMassTransitHostedService();
 
 var app = builder.Build();
 

@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aRGhu9g46zILjPnOPtFVOtwC4Anec33NJX3MV/K5gatEfVMxKOu6uv/oYGOcVP7WjQ4RoOlfN2OJ7UZ/xqYi7g==",
+  "dgSpecHash": "4JavrEM50V+yudGZnjkg9MwF9I9rBgrKCclPOFwEe+I15PkDKJTKg/MFcZst73BvGpDCQCtQupf56uQkoZmAzQ==",
   "success": true,
   "projectFilePath": "D:\\POC Work\\SendReportsCompany\\SendReportsCompany\\SendReportsCompany.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\masstransit\\8.0.9\\masstransit.8.0.9.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.abstractions\\8.0.9\\masstransit.abstractions.8.0.9.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\masstransit.aspnetcore\\7.3.1\\masstransit.aspnetcore.7.3.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.extensions.dependencyinjection\\7.3.1\\masstransit.extensions.dependencyinjection.7.3.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.rabbitmq\\8.0.9\\masstransit.rabbitmq.8.0.9.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

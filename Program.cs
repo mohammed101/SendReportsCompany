@@ -1,6 +1,5 @@
 using MassTransit;
 using RabbitMQ.Client;
-using SendReportsCompany;
 using SendReportsCompany.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -51,8 +50,8 @@ builder.Services.AddMassTransit(mt =>
             });
         });
     });
+    builder.Services.AddMassTransitHostedService();
 });
-builder.Services.AddMassTransitHostedService();
 
 var app = builder.Build();
 

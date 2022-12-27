@@ -48,10 +48,6 @@
               "target": "Package",
               "version": "[8.0.9, )"
             },
-            "MassTransit.AspNetCore": {
-              "target": "Package",
-              "version": "[7.3.1, )"
-            },
             "MassTransit.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.3.1, )"

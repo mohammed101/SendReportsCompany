@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TNkuasCPYsOdPRLcTRhm98CaHqpADT8a1IrC4O1sRuQ=",
+  "Source": "SendReportsCompany",
+  "BasePath": "_content/SendReportsCompany",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

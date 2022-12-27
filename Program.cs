@@ -1,5 +1,6 @@
+using MassTransit;
 using RabbitMQ.Client;
-using SendReportsCompany;
+using SendReportsCompany.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,15 +21,38 @@ builder.Services.AddMassTransit(mt =>
             h.Password("guest");
         });
 
-        config.Message<ISendReportRequest>(e => e.SetEntityName("report-requests")); // name of the primary exchange
-        config.Publish<ISendReportRequest>(e => e.ExchangeType = ExchangeType.Direct); // primary exchange type
-        config.Send<ISendReportRequest>(e =>
+        config.ReceiveEndpoint("email-reports", re =>
         {
-            e.UseRoutingKeyFormatter(context => context.Message.Provider.ToString()); // route by provider (email or fax)
+            // turns off default fanout settings
+            re.ConfigureConsumeTopology = false;
+            // a replicated queue to provide high availability and data safety. available in RMQ 3.8+
+            re.SetQuorumQueue();
+
+            // enables a lazy queue for more stable cluster with better predictive performance.
+            // Please note that you should disable lazy queues if you require really high performance, if the queues are always short, or if you have set a max-length policy.
+            re.SetQueueArgument("declare", "lazy");
+
+            re.Consumer<EmailConsumer>();
+            re.Bind("report-requests", e =>
+            {
+                e.RoutingKey = "email";
+                e.ExchangeType = ExchangeType.Direct;
+            });
+        });
+        config.ReceiveEndpoint("fax-reports", re =>
+        {
+            re.ConfigureConsumeTopology = false;
+            re.Consumer<FaxConsumer>();
+            re.Bind("report-requests", e =>
+            {
+                e.RoutingKey = "fax";
+                e.ExchangeType = ExchangeType.Direct;
+            });
         });
     });
+    builder.Services.AddMassTransitHostedService();
 });
-builder.Services.AddMassTransitHostedService();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

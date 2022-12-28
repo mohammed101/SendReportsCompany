@@ -17,7 +17,7 @@ namespace SendReportsCompany.Controllers
 
         public async Task<ActionResult> SubmitOrder([FromBody] ReportRequestModel reportRequestModel)
         {
-            await _meditor.Publish(reportRequestModel);
+            await _meditor.Publish(new SubmitReportRequestCommand { ReportRequestModel = reportRequestModel });
             return Ok();
         }
     }

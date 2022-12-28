@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SendReportsCompany.Models;
 
 namespace SendReportsCompany.Controllers
 {
@@ -12,6 +13,12 @@ namespace SendReportsCompany.Controllers
         public ReportController(IMediator mediator)
         {
             _meditor = mediator;
+        }
+
+        public async Task<ActionResult> SubmitOrder([FromBody] ReportRequestModel reportRequestModel)
+        {
+            await _meditor.Publish(reportRequestModel);
+            return Ok();
         }
     }
 }

@@ -36,3 +36,5 @@ D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\refint\SendRe
 D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.pdb
 D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\SendReportsCompany.genruntimeconfig.cache
 D:\POC Work\SendReportsCompany\SendReportsCompany\obj\Debug\net6.0\ref\SendReportsCompany.dll
+D:\POC Work\SendReportsCompany\SendReportsCompany\bin\Debug\net6.0\MediatR.dll
+D:\POC Work\SendReportsCompany\SendReportsCompany\bin\Debug\net6.0\MediatR.Contracts.dll

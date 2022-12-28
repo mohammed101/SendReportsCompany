@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SendReportsCompany.Controllers
@@ -7,5 +8,10 @@ namespace SendReportsCompany.Controllers
     [ApiController]
     public class ReportController : ControllerBase
     {
+        private readonly IMediator _meditor;
+        public ReportController(IMediator mediator)
+        {
+            _meditor = mediator;
+        }
     }
 }

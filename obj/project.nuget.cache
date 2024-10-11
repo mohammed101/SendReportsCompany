@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "u5t+DGVVkaJZwYVMzFc3Q8jw4upamixOJ+U2LZY8oKxMPKJ4JKtHAAVsAio9UIEmRWugElrGJjqYl4kOcOz5Lw==",
+  "dgSpecHash": "wN/kp1uNIzlk3kcJlcraXkNSwsqyJm7s8EILKoYArJ1c1pGrlRcPQVHOIQHhycVrf4/BOa1NM9k65KranRo3XA==",
   "success": true,
   "projectFilePath": "D:\\POC Work\\SendReportsCompany\\SendReportsCompany\\SendReportsCompany.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moham\\.nuget\\packages\\masstransit\\8.0.9\\masstransit.8.0.9.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.abstractions\\8.0.9\\masstransit.abstractions.8.0.9.nupkg.sha512",
-    "C:\\Users\\moham\\.nuget\\packages\\masstransit.aspnetcore\\7.3.1\\masstransit.aspnetcore.7.3.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.extensions.dependencyinjection\\7.3.1\\masstransit.extensions.dependencyinjection.7.3.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\masstransit.rabbitmq\\8.0.9\\masstransit.rabbitmq.8.0.9.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\moham\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.18\\microsoft.extensions.configuration.abstractions.3.1.18.nupkg.sha512",
     "C:\\Users\\moham\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.18\\microsoft.extensions.dependencyinjection.abstractions.3.1.18.nupkg.sha512",

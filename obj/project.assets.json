@@ -41,25 +41,6 @@
           }
         }
       },
-      "MassTransit.AspNetCore/7.3.1": {
-        "type": "package",
-        "dependencies": {
-          "MassTransit": "7.3.1",
-          "MassTransit.Extensions.DependencyInjection": "7.3.1",
-          "Microsoft.Extensions.Diagnostics.HealthChecks": "3.1.18",
-          "Microsoft.Extensions.Hosting.Abstractions": "3.1.18"
-        },
-        "compile": {
-          "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "MassTransit.Extensions.DependencyInjection/7.3.1": {
         "type": "package",
         "dependencies": {
@@ -90,6 +71,35 @@
         },
         "runtime": {
           "lib/net6.0/MassTransit.RabbitMqTransport.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR/11.1.0": {
+        "type": "package",
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
             "related": ".xml"
           }
         }
@@ -502,20 +512,6 @@
         "mt-logo-small.png"
       ]
     },
-    "MassTransit.AspNetCore/7.3.1": {
-      "sha512": "l5zu6mHevPQGP1tfDg4My8dtqH4n2jL22+Y1+GnAs12liQy5gYLcJAwSmCKb1iusjjD9S1tgfdILVkAfShfN8w==",
-      "type": "package",
-      "path": "masstransit.aspnetcore/7.3.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.dll",
-        "lib/netstandard2.0/MassTransit.AspNetCoreIntegration.xml",
-        "masstransit.aspnetcore.7.3.1.nupkg.sha512",
-        "masstransit.aspnetcore.nuspec",
-        "mt-logo-small.png"
-      ]
-    },
     "MassTransit.Extensions.DependencyInjection/7.3.1": {
       "sha512": "s1gnkYUngHNP9m2+Jx1vuUAvoVm4KB3oVbtFJUlXNtBBzhRFq1N3Y0w5iiew60ZBLm0j0RQcSRbI0ahMOkL+og==",
       "type": "package",
@@ -548,6 +544,36 @@
         "masstransit.rabbitmq.8.0.9.nupkg.sha512",
         "masstransit.rabbitmq.nuspec",
         "mt-logo-small.png"
+      ]
+    },
+    "MediatR/11.1.0": {
+      "sha512": "YIbtrLOyeCuIv8vIuHL/mMdls5xmgS36pIOJDxKZuu55nxA2MI2Z+E/Uk0z+F/LE11AGmpjplOM0NZ91m5LQBA==",
+      "type": "package",
+      "path": "mediatr/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.11.1.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "MediatR.Contracts/1.0.1": {
+      "sha512": "NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "type": "package",
+      "path": "mediatr.contracts/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.Contracts.dll",
+        "lib/net461/MediatR.Contracts.xml",
+        "lib/netstandard2.0/MediatR.Contracts.dll",
+        "lib/netstandard2.0/MediatR.Contracts.xml",
+        "mediatr.contracts.1.0.1.nupkg.sha512",
+        "mediatr.contracts.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -1128,9 +1154,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "MassTransit >= 8.0.9",
-      "MassTransit.AspNetCore >= 7.3.1",
       "MassTransit.Extensions.DependencyInjection >= 7.3.1",
       "MassTransit.RabbitMQ >= 8.0.9",
+      "MediatR >= 11.1.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1159,8 +1185,8 @@
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://rasan-insurtech.pkgs.visualstudio.com/_packaging/InsuranceTech-Feed/nuget/v3/index.json": {}
+        "https://rasan-insurtech.pkgs.visualstudio.com/_packaging/InsuranceTech-Feed/nuget/v3/index.json": {},
+        "https://tameeni.pkgs.visualstudio.com/_packaging/GlobalFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
@@ -1182,10 +1208,6 @@
             "target": "Package",
             "version": "[8.0.9, )"
           },
-          "MassTransit.AspNetCore": {
-            "target": "Package",
-            "version": "[7.3.1, )"
-          },
           "MassTransit.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[7.3.1, )"
@@ -1193,6 +1215,10 @@
           "MassTransit.RabbitMQ": {
             "target": "Package",
             "version": "[8.0.9, )"
+          },
+          "MediatR": {
+            "target": "Package",
+            "version": "[11.1.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
